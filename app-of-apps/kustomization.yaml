@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: zavv60tbm-go 
+  janus-idp.io/tekton: zavv60tbm-go
+  backstage.io/kubernetes-id: zavv60tbm-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: zavv60tbm-go
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
